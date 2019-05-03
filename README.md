@@ -32,7 +32,7 @@ sudo su
 exit
 source /etc/environment
 ```
-**5.** Create `conda_group` (for permissions outside homedir, in paricular `/opt`, without sudo)
+**5.** Create `conda_group` (for permissions outside homedir, in particular `/opt`, without sudo)
 ```
 sudo groupadd conda_group
 ```
