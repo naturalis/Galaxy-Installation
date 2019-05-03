@@ -20,6 +20,22 @@ sudo ln -s /usr/bin/python /home/galaxy-python/
 ```
 wget https://repo.anaconda.com/archive/Anaconda3-2018.12-Linux-x86_64.sh
 sudo sh Anaconda3-2018.12-Linux-x86_64.sh
-/opt/anaconda3
-no bashrc
 ```
+Use `/opt/anaconda3` for the install location,
+`no` for initialization of Anaconda3 in /home/ubuntu/.bashrc
+and `no` for installation of Microsoft VSCode.
+4.Add python and conda to environment
+```
+sudo nano /etc/environment
+```
+prepend path with:
+```
+/home/galaxy-python:/opt/anaconda3/bin:
+```
+```
+source /etc/environment
+```
+
+
+
+
