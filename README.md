@@ -23,7 +23,8 @@ sudo sh Anaconda3-2018.12-Linux-x86_64.sh
 ```
 Use `/opt/anaconda3` for the install location,
 `no` for initialization of Anaconda3 in /home/ubuntu/.bashrc
-and `no` for installation of Microsoft VSCode.    
+and `no` for installation of Microsoft VSCode.  
+  
 4.Add python and conda to environment
 ```
 sudo nano /etc/environment
