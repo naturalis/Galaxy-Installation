@@ -7,16 +7,16 @@ These instructions start from the assumption that an instance running Ubuntu (in
 ## Python, Conda, Users and Groups
 As of this writing, Ubuntu 18 has Python 3.x installed by default, but [Galaxy](https://docs.galaxyproject.org/) still requires Python 2.7 for install 
 
-1.Install Python v. 2.7 (user: ubuntu)
+**1.** Install Python v. 2.7 (user: ubuntu)
 ```
 sudo apt-get install python
 ```
-2.Create 'galaxy-python' folder
+**2.** Create 'galaxy-python' folder
 ```
 sudo mkdir /home/galaxy-python
 sudo ln -s /usr/bin/python /home/galaxy-python/
 ```
-3.Download and install Conda
+**3.** Download and install Conda
 ```
 wget https://repo.anaconda.com/archive/Anaconda3-2018.12-Linux-x86_64.sh
 sudo sh Anaconda3-2018.12-Linux-x86_64.sh
@@ -25,14 +25,14 @@ Use `/opt/anaconda3` for the install location,
 `no` for initialization of Anaconda3 in /home/ubuntu/.bashrc
 and `no` for installation of Microsoft VSCode.  
   
-4.Add python and conda to `path` (system wide)
+**4.** Add python and conda to `path` (system wide)
 ```
 sudo su
 (rm /etc/environment; cat | sed 's_PATH="_PATH="/home/galaxy-python:/opt/anaconda3/bin:_g' > /etc/environment) < /etc/environment
 exit
 source /etc/environment
 ```
-5.Create `conda_group` (for permissions outside homedir, in paricular `/opt`, without sudo)
+**5.** Create `conda_group` (for permissions outside homedir, in paricular `/opt`, without sudo)
 ```
 sudo groupadd conda_group
 ```
