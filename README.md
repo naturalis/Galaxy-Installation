@@ -36,5 +36,33 @@ source /etc/environment
 ```
 sudo groupadd conda_group
 ```
+**6.** Create **NON-root** user `galaxy`
+```
+sudo useradd -d /home/galaxy -m galaxy
+```
+set password and don't publish it on this page..
+```
+sudo passwd galaxy
+#secret_password
+```
+**7.** Login as user `galaxy` and change command prompt of login shell
+```
+su - galaxy
+#secret_password
+chsh -s /bin/bash
+exit
+# login again to see if worked
+```
+**8.** Add `ubuntu` and `galaxy` to `conda_group` (user: ubuntu)
+```
+for user in ubuntu galaxy; do sudo usermod -a -G conda_group "$user"; done
+
+```
+**9.** Add `conda_group` to *conda*
+```
+sudo chgrp -R conda_group /opt/anaconda3/
+sudo chmod -R g+rwx /opt/anaconda3/
+```
+
 
 
