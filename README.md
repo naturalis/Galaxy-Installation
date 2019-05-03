@@ -56,7 +56,6 @@ exit
 **8.** Add `ubuntu` and `galaxy` to `conda_group` (user: ubuntu)
 ```
 for user in ubuntu galaxy; do sudo usermod -a -G conda_group "$user"; done
-
 ```
 **9.** Add `conda_group` to *conda*
 ```
