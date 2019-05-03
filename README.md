@@ -28,7 +28,7 @@ and `no` for installation of Microsoft VSCode.
 4.Add python and conda to `path` (system wide)
 ```
 sudo su
-cat /etc/environment | sed 's_PATH="_PATH="/home/galaxy-python:/opt/anaconda3/bin:_g' > /etc/environment
+(rm /etc/environment; cat | sed 's_PATH="_PATH="/home/galaxy-python:/opt/anaconda3/bin:_g' > /etc/environment) < /etc/environment
 exit
 source /etc/environment
 ```
