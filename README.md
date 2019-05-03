@@ -25,18 +25,16 @@ Use `/opt/anaconda3` for the install location,
 `no` for initialization of Anaconda3 in /home/ubuntu/.bashrc
 and `no` for installation of Microsoft VSCode.  
   
-4.Add python and conda to environment
+4.Add python and conda to `path` (system wide)
 ```
-sudo nano /etc/environment
-```
-prepend path with:
-```
-/home/galaxy-python:/opt/anaconda3/bin:
-```
-```
+sudo su
+cat /etc/environment | sed 's_PATH="_PATH="/home/galaxy-python:/opt/anaconda3/bin:_g' > /etc/environment
+exit
 source /etc/environment
 ```
-
-
+5.Create `conda_group` (for permissions outside homedir, in paricular `/opt`, without sudo)
+```
+sudo groupadd conda_group
+```
 
 
