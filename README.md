@@ -5,9 +5,9 @@ This repo documents the installation of **Galaxy** `v.19.01` on **Ubuntu** `18.0
 These instructions start from the assumption that an instance running Ubuntu (in this case 18.04.0 LTS on a virtual machine consisting of 16 CPUs, 16 GB ram and 60 GB Diskspace, a.k.a. 'flavor' hpc.16c.16r.60h) has been created and can be accessed via SSH.
 
 ## Python, Conda, Users and Groups
-As of this writing, Ubuntu 18 has Python 3.x installed by default, but [Galaxy](https://docs.galaxyproject.org/) still requires Python 2.7 for install 
+As of this writing, Ubuntu 18 has Python 3.x installed by default, but [Galaxy](https://docs.galaxyproject.org/) still requires Python 2.7 for install. Galaxy should be run as user galaxy (not ubuntu). In the instructions below we aim to be explicit about the current user, but in general: unless the install requires `sudo` the user should be `galaxy`.
 
-**1.** Install Python v. 2.7 (user: ubuntu)
+**1.** Install Python v. 2.7 (user: **ubuntu**)
 ```
 sudo apt-get install python
 ```
@@ -45,7 +45,7 @@ set password and don't publish it on this page..
 sudo passwd galaxy
 #secret_password
 ```
-**7.** Login as user `galaxy` and change command prompt of login shell
+**7.** Login as user `galaxy` and change command prompt of login shell (user: **galaxy**)
 ```
 su - galaxy
 #secret_password
@@ -53,7 +53,7 @@ chsh -s /bin/bash
 exit
 # login again to see if worked
 ```
-**8.** Add `ubuntu` and `galaxy` to `conda_group` (user: ubuntu)
+**8.** Add `ubuntu` and `galaxy` to `conda_group` (user: **ubuntu**)
 ```
 for user in ubuntu galaxy; do sudo usermod -a -G conda_group "$user"; done
 ```
@@ -62,6 +62,18 @@ for user in ubuntu galaxy; do sudo usermod -a -G conda_group "$user"; done
 sudo chgrp -R conda_group /opt/anaconda3/
 sudo chmod -R g+rwx /opt/anaconda3/
 ```
+**10.** Add `conda_group` to *galaxy*
+sudo chgrp -R conda_group /home/galaxy
+sudo chmod -R g+rwx /home/galaxy
+
+**11.** 'Downngrade' Conda to `canary` as a workaround for this [issue](https://github.com/conda/conda/issues/7267#issuecomment-420571523)
+```
+conda config --add channels conda-canary
+conda update -n base conda
+```
+
+
+
 
 
 
