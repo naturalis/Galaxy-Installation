@@ -62,18 +62,56 @@ for user in ubuntu galaxy; do sudo usermod -a -G conda_group "$user"; done
 sudo chgrp -R conda_group /opt/anaconda3/
 sudo chmod -R g+rwx /opt/anaconda3/
 ```
-**10.** Add `conda_group` to *galaxy*
-sudo chgrp -R conda_group /home/galaxy
-sudo chmod -R g+rwx /home/galaxy
-
-**11.** 'Downngrade' Conda to `canary` as a workaround for this [issue](https://github.com/conda/conda/issues/7267#issuecomment-420571523)
+**10.** 'Downngrade' Conda to `canary` as a workaround for this [issue](https://github.com/conda/conda/issues/7267#issuecomment-420571523)
 ```
 conda config --add channels conda-canary
 conda update -n base conda
 ```
+## PostgresQL
+(user: **ubuntu**)
+```
+sudo apt-get install postgresql postgresql-contrib
+sudo update-rc.d postgresql enable
+sudo service postgresql start
+sudo su - postgres
+createdb galaxydb
+psql galaxydb
+CREATE USER galaxy WITH PASSWORD '#secret_password';
+GRANT ALL PRIVILEGES ON DATABASE galaxydb to galaxy;
+\q
+exit
+```
+
+## Install Galaxy
+(user: **galaxy**)
+Login as user `galaxy` and load the modified path
+```
+su - galaxy
+source /etc/environment
+```
+Clone the [latest](https://docs.galaxyproject.org/en/master/) stable release of Galaxy (19.01 as of this writing)
+```
+git clone -b release_19.01 https://github.com/galaxyproject/galaxy.git
+```
+Change permissions of the `config` folder
+```
+chmod 777 /home/galaxy/galaxy/config
+```
+Adjust the config file (/home/galaxy/galaxy/config/galaxy.yml). Either edit in place or 
+upload a customized `galaxy.yml` file.
+```
+cp /home/galaxy/galaxy/config/galaxy.yml /home/galaxy/galaxy/config/galaxy.yml_back
+```
 
 
 
 
-
+**#Issue** Add `conda_group` to *galaxy*
+Files in /home/galaxy should be added (recursively) to the conda_group, but not the parent
+directory (/home/galaxy) and neither /home/galaxy/.ssh
+Probably /home/galaxy/galaxy and /home/galaxy/tools will be most relevant
+```
+sudo chgrp -R conda_group /home/galaxy/*
+sudo chmod -R g+rwx /home/galaxy/*
+```
 
