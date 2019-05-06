@@ -83,7 +83,7 @@ exit
 ```
 
 ## Install Galaxy
-(user: **galaxy**)
+(user: **galaxy**)  
 Login as user `galaxy` and load the modified path
 ```
 su - galaxy
@@ -104,8 +104,6 @@ cp /home/galaxy/galaxy/config/galaxy.yml /home/galaxy/galaxy/config/galaxy.yml_b
 ```
 
 
-
-
 **#Issue** Add `conda_group` to *galaxy*
 Files in /home/galaxy should be added (recursively) to the conda_group, but not the parent
 directory (/home/galaxy) and neither /home/galaxy/.ssh
@@ -114,4 +112,3 @@ Probably /home/galaxy/galaxy and /home/galaxy/tools will be most relevant
 sudo chgrp -R conda_group /home/galaxy/*
 sudo chmod -R g+rwx /home/galaxy/*
 ```
-
