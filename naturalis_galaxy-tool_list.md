@@ -26,12 +26,12 @@
 |[prinseq sequence trimmer](https://github.com/naturalis/galaxy-tool-prinseq-sequence-trimmer)  | prinseq trim tool |
 |[sickle pe](https://github.com/naturalis/galaxy-tool-sickle-pe)  | wrapper for trimming of paired-end reads using sickle |
 |[split on primer ](https://github.com/naturalis/galaxy-tool-split-on-primer)  | demultiplex a sequence file using primer sequences or sequence labels |
-|[spreading correction](https://github.com/naturalis/galaxy-tool-spreading-correction)  |  |
-|[synonym checker](https://github.com/naturalis/galaxy-tool-synonym-checker)  |  |
-|[taxonmatcher](https://github.com/naturalis/galaxy-tool-taxonmatcher)  |  |
-|[taxonomic accumulation](https://github.com/naturalis/galaxy-tool-taxonomic-accumulation)  |  |
-|[temp 2019](https://github.com/naturalis/galaxy-tool-temp-2019)  |  |
-|[UMI isolation](https://github.com/naturalis/galaxy-tool-UMI-isolation)  |  |
-|[visual reporter](https://github.com/naturalis/galaxy-tool-visual-reporter)  |  |
-|[vsearch pipeline](https://github.com/naturalis/galaxy-tool-vsearch-pipeline)  |  |
-|[worms](https://github.com/naturalis/galaxy-tool-worms)  |  |
+|[spreading correction](https://github.com/naturalis/galaxy-tool-spreading-correction)  | wrapper for spreading-correction |
+|[synonym checker](https://github.com/naturalis/galaxy-tool-synonym-checker)  | check taxonomic names using the Global Names api or the TNRS api's |
+|[taxonmatcher](https://github.com/naturalis/galaxy-tool-taxonmatcher)  | match input taxonomy with GBIF and Dutch species register |
+|[taxonomic accumulation](https://github.com/naturalis/galaxy-tool-taxonomic-accumulation)  | accumulate taxonomic identifications on each level |
+|[temp 2019](https://github.com/naturalis/galaxy-tool-temp-2019)  | **temporary file ?** |
+|[UMI isolation](https://github.com/naturalis/galaxy-tool-UMI-isolation)  |  accumulate all UMIs and output tabular-, BLAST- and zip-file |
+|[visual reporter](https://github.com/naturalis/galaxy-tool-visual-reporter)  | create multiple plots with R Phyloseq package |
+|[vsearch pipeline](https://github.com/naturalis/galaxy-tool-vsearch-pipeline)  | make otu table with vsearch * under construction * |
+|[worms](https://github.com/naturalis/galaxy-tool-worms)  | check synonyms and genes using worms api |
