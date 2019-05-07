@@ -1,7 +1,7 @@
-Naturalis Galaxy Tool list
+##Naturalis Galaxy Tool list
 
-https://github.com/naturalis/galaxy-tool-manage-zip
-https://github.com/naturalis/galaxy-tool-split-on-primer Private
+[manage-zip](https://github.com/naturalis/galaxy-tool-manage-zip)
+https://github.com/naturalis/galaxy-tool-split-on-primer
 https://github.com/naturalis/galaxy-tool-prinseq-sequence-trimmer
 https://github.com/naturalis/galaxy-tool-beta
 https://github.com/naturalis/galaxy-tool-otutab_trim
