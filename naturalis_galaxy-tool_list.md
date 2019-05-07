@@ -25,7 +25,7 @@
 |[prinseq sequence trimmer Jasper](https://github.com/naturalis/galaxy-tool-prinseq-sequence-trimmer-Jasper)  | trim and filter reads using prinseq |
 |[prinseq sequence trimmer](https://github.com/naturalis/galaxy-tool-prinseq-sequence-trimmer)  | prinseq trim tool |
 |[sickle pe](https://github.com/naturalis/galaxy-tool-sickle-pe)  | wrapper for trimming of paired-end reads using sickle |
-|[split on primer ](https://github.com/naturalis/galaxy-tool-split-on-primer)  | Demultiplex a sequence file based on primer sequences or sequence labels |
+|[split on primer ](https://github.com/naturalis/galaxy-tool-split-on-primer)  | demultiplex a sequence file using primer sequences or sequence labels |
 |[spreading correction](https://github.com/naturalis/galaxy-tool-spreading-correction)  |  |
 |[synonym checker](https://github.com/naturalis/galaxy-tool-synonym-checker)  |  |
 |[taxonmatcher](https://github.com/naturalis/galaxy-tool-taxonmatcher)  |  |
