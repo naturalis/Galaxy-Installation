@@ -98,7 +98,11 @@ Change permissions of the `config` folder
 chmod 777 /home/galaxy/galaxy/config
 ```
 Adjust the config file (/home/galaxy/galaxy/config/galaxy.yml). Either edit in place or 
-upload a customized `galaxy.yml` file.
+upload a customized `galaxy.yml` file. The config file holds key system information. To 
+name a few, this is where to specify administrators, the location of dataset files, network 
+ports, system email address and Conda configuration settings. Backup the template file before
+messing around:
+
 ```
 cp /home/galaxy/galaxy/config/galaxy.yml /home/galaxy/galaxy/config/galaxy.yml_back
 ```
