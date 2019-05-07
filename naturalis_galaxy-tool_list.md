@@ -15,12 +15,12 @@
 |[fastqc sequence analysis](https://github.com/naturalis/galaxy-tool-fastqc-sequence-analysis)  | quality check on raw sequence data |
 |[flash](https://github.com/naturalis/galaxy-tool-flash)  | wrapper for flash |
 |[lca ](https://github.com/naturalis/galaxy-tool-lca)  | determine lowest common ancestor from BLAST results |
-|[make otu table](https://github.com/naturalis/galaxy-tool-make-otu-table)  |  |
-|[manage zip](https://github.com/naturalis/galaxy-tool-manage-zip)  |  |
-|[metadata harvester](https://github.com/naturalis/galaxy-tool-metadata-harvester)  |  |
-|[nucleotide translation](https://github.com/naturalis/galaxy-tool-nucleotide-translation)  |  |
-|[otu table freq filter](https://github.com/naturalis/galaxy-tool-otu-table-freq-filter)  |  |
-|[otutab_trim](https://github.com/naturalis/galaxy-tool-otutab_trim)  |  |
+|[make otu table](https://github.com/naturalis/galaxy-tool-make-otu-table)  | pipeline for clustering and making otu tables  |
+|[manage zip](https://github.com/naturalis/galaxy-tool-manage-zip)  | facilitate the usage of zip files in galaxy |
+|[metadata harvester](https://github.com/naturalis/galaxy-tool-metadata-harvester)  | collect metadata from Naturalis, BOLD and ALA api's |
+|[nucleotide translation](https://github.com/naturalis/galaxy-tool-nucleotide-translation)  | translate nucleotide sequences and count stop codons |
+|[otu table freq filter](https://github.com/naturalis/galaxy-tool-otu-table-freq-filter)  | frequency filter for otu tables with unique otu exception |
+|[otutab_trim](https://github.com/naturalis/galaxy-tool-otutab_trim)  | trim otu table |
 |[prinseq sequence analysis Jasper](https://github.com/naturalis/galaxy-tool-prinseq-sequence-analysis-Jasper)  |  |
 |[prinseq sequence trimmer Jasper](https://github.com/naturalis/galaxy-tool-prinseq-sequence-trimmer-Jasper)  |  |
 |[prinseq sequence trimmer](https://github.com/naturalis/galaxy-tool-prinseq-sequence-trimmer)  |  |
