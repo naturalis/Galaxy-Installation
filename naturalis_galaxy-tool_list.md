@@ -1,6 +1,6 @@
 ## Naturalis Galaxy Tool list
 
-[add blast to otutable](https://github.com/naturalis/galaxy-tool-add-blast-to-otutable)     merge BLAST output with otu tables  
+[add blast to otutable](https://github.com/naturalis/galaxy-tool-add-blast-to-otutable)			merge BLAST output with otu tables  
 [alpha](https://github.com/naturalis/galaxy-tool-alpha)  
 [beta](https://github.com/naturalis/galaxy-tool-beta)  
 [BLAST ](https://github.com/naturalis/galaxy-tool-BLAST)  
