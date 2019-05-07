@@ -1,7 +1,13 @@
 ## Naturalis Galaxy Tool list
 
-[add blast to otutable](https://github.com/naturalis/galaxy-tool-add-blast-to-otutable)    merge BLAST output with otu tables  
-[alpha](https://github.com/naturalis/galaxy-tool-alpha)  
+| Tables        | Are           |
+| ------------- |:-------------:|
+| [add blast to otutable](https://github.com/naturalis/galaxy-tool-add-blast-to-otutable) | merge BLAST output with otu tables |
+| [alpha](https://github.com/naturalis/galaxy-tool-alpha) | Calculate alpha diversity for an otu table | 
+
+
+[add blast to otutable](https://github.com/naturalis/galaxy-tool-add-blast-to-otutable) merge BLAST output with otu tables  
+[alpha](https://github.com/naturalis/galaxy-tool-alpha) Calculate alpha diversity for an otu table  
 [beta](https://github.com/naturalis/galaxy-tool-beta)  
 [BLAST ](https://github.com/naturalis/galaxy-tool-BLAST)  
 [BLAST_wrapper](https://github.com/naturalis/galaxy-tool-BLAST_wrapper)  
