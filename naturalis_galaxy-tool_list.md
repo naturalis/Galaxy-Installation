@@ -6,8 +6,8 @@
 |[add blast to otutable](https://github.com/naturalis/galaxy-tool-add-blast-to-otutable) | merge BLAST output with otu tables |
 |[alpha](https://github.com/naturalis/galaxy-tool-alpha) | calculate alpha diversity for an otu table | 
 |[BLAST ](https://github.com/naturalis/galaxy-tool-BLAST)  | wrapper for BLASTn |
-|[BLAST_wrapper](https://github.com/naturalis/galaxy-tool-BLAST_wrapper)  | **superseded** |
-|[compare taxonomy lists](https://github.com/naturalis/galaxy-tool-compare-taxonomy-lists)  | *under construction* |
+|[BLAST_wrapper](https://github.com/naturalis/galaxy-tool-BLAST_wrapper)  | **superseded ?** |
+|[compare taxonomy lists](https://github.com/naturalis/galaxy-tool-compare-taxonomy-lists)  | ***under construction*** |
 |[count taxa per sample](https://github.com/naturalis/galaxy-tool-count-taxa-per-sample)  | merge BLAST output with otu tables |
 |[cutadapt docker](https://github.com/naturalis/galaxy-tool-cutadapt-docker)  | docker test? |
 |[cutadapt sequence trimmer](https://github.com/naturalis/galaxy-tool-cutadapt-sequence-trimmer)  | trim and filter reads with cutadapt |
