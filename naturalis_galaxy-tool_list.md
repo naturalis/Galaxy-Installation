@@ -1,6 +1,7 @@
-##Naturalis Galaxy Tool list
+## Naturalis Galaxy Tool list
 
-[manage-zip](https://github.com/naturalis/galaxy-tool-manage-zip)
+[manage-zip](https://github.com/naturalis/galaxy-tool-manage-zip)  
+
 https://github.com/naturalis/galaxy-tool-split-on-primer
 https://github.com/naturalis/galaxy-tool-prinseq-sequence-trimmer
 https://github.com/naturalis/galaxy-tool-beta
@@ -15,12 +16,12 @@ https://github.com/naturalis/galaxy-tool-vsearch-pipeline
 https://github.com/naturalis/galaxy-tool-spreading-correction
 https://github.com/naturalis/galaxy-tool-temp-2019
 https://github.com/naturalis/galaxy-tool-BLAST_wrapper
-https://github.com/naturalis/galaxy-tool-lca Private
+https://github.com/naturalis/galaxy-tool-lca
 https://github.com/naturalis/galaxy-tool-cutadapt-docker
 https://github.com/naturalis/galaxy-tool-worms
 https://github.com/naturalis/galaxy-tool-sickle-pe
 https://github.com/naturalis/galaxy-tool-UMI-isolation
-https://github.com/naturalis/galaxy-tool-BLAST Private
+https://github.com/naturalis/galaxy-tool-BLAST
 https://github.com/naturalis/galaxy-tool-taxonmatcher
 https://github.com/naturalis/galaxy-tool-taxonomic-accumulation
 https://github.com/naturalis/galaxy-tool-nucleotide-translation
