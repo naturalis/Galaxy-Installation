@@ -146,7 +146,7 @@ Add `conda_group` to *galaxy*
 chgrp -R conda_group /home/galaxy/{galaxy,Tools,GenBank,ExtraRef,Log}
 chmod -R g+rwx /home/galaxy/{galaxy,Tools,GenBank,ExtraRef,Log}
 ```
-NOTE: this is a workaround for adding  `conda_group` to /home/galaxy *recursively*, because
+NOTE: this is a workaround for adding `conda_group` to /home/galaxy *recursively*, because
 that strategy resulted in permission errors (especially with /home/galaxy/.ssh but also with
 the parent directory).
 
@@ -159,7 +159,14 @@ sudo apt install nginx
 sudo ufw allow 'Nginx HTTP'
 sudo ufw status
 ```
-
+NOTE: There are still some issues regarding the configuration of `nginx.conf`.
+For now the `nginx.conf` file of the current production-server was used, with replacement
+of server_name IP with the floating IP of this instance.
+```
+sudo systemctl stop nginx
+sudo systemctl start nginx
+sudo systemctl restart nginx
+```
 
 
 
