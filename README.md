@@ -121,7 +121,8 @@ cp /home/galaxy/galaxy/config/galaxy.yml /home/galaxy/galaxy/config/galaxy.yml_b
 ```
 
 
-**#Issue** Add `conda_group` to *galaxy*  
+## Issue
+Add `conda_group` to *galaxy*  
 Files in /home/galaxy should be added (recursively) to the conda_group, but not the parent
 directory (/home/galaxy) and neither /home/galaxy/.ssh
 Probably /home/galaxy/galaxy and /home/galaxy/tools will be most relevant
