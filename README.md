@@ -150,7 +150,15 @@ NOTE: this is a workaround for adding  `conda_group` to /home/galaxy *recursivel
 that strategy resulted in permission errors (especially with /home/galaxy/.ssh but also with
 the parent directory).
 
-
+## Install Nginx
+(user: **ubuntu**)
+[Nginx](http://nginx.org/en/) ("engine x") is an HTTP and reverse proxy server
+```
+sudo apt update
+sudo apt install nginx
+sudo ufw allow 'Nginx HTTP'
+sudo ufw status
+```
 
 
 
