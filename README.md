@@ -151,7 +151,7 @@ that strategy resulted in permission errors (especially with /home/galaxy/.ssh b
 the parent directory).
 
 ## Install Nginx
-(user: **ubuntu**)
+(user: **ubuntu**)  
 [Nginx](http://nginx.org/en/) ("engine x") is an HTTP and reverse proxy server
 ```
 sudo apt update
