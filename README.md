@@ -96,7 +96,7 @@ exit
 ```
 
 ## Install Galaxy
-(user: **galaxy**)  
+(user: **galaxy**)    
 Login as user `galaxy` and load the modified path
 ```
 su - galaxy
