@@ -68,7 +68,7 @@ conda config --add channels conda-canary
 conda update -n base conda
 ```
 ## manage SSH keys
-(user: **ubuntu**)
+(user: **ubuntu**)  
 To allow additional adminstrators to log in as ubuntu via SSH, add their public SSH keys to the `authorized_keys` list.
 ```
 nano /home/ubuntu/.ssh/authorized_keys
