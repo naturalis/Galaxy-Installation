@@ -120,14 +120,42 @@ cp /home/galaxy/galaxy/config/galaxy.yml.sample /home/galaxy/galaxy/config/galax
 ```
 Edit **galaxy.yml**:  
 change listening port from `http: 127.0.0.1:8080` to `http: 0.0.0.0:8080`  
-Add email adress(es) of admins (*uncomment* admin_users: 'john.doe@natalis.nl')
-
-## Issue
+Add email adress(es) of admins (*uncomment* admin_users: 'john.doe@natalis.nl')  
+  
+## Start Galaxy
+(user: **galaxy**)  
+```
+sh /home/galaxy/galaxy/run.sh --daemon
+```
+Check if the Galaxy server can be reached from your webbrowser, e.g. `http://###.###.###.###:8080` (use the floating ip of your instance followed by *:8080* since `nginx` has not been setup).  
+**Stop Galaxy**
+```
+sh /home/galaxy/galaxy/run.sh --stop-daemon
+```
+Create toolmenu file
+```
+cp /home/galaxy/galaxy/config/tool_conf.xml.sample /home/galaxy/galaxy/config/tool_conf.xml
+```
+Create folder structure
+```
+mkdir -p /home/galaxy/{Tools,GenBank,ExtraRef,Log}
+```
 Add `conda_group` to *galaxy*  
-Files in /home/galaxy should be added (recursively) to the conda_group, but not the parent
-directory (/home/galaxy) and neither /home/galaxy/.ssh
-Probably /home/galaxy/galaxy and /home/galaxy/tools will be most relevant
+(still user: **galaxy**)
 ```
-sudo chgrp -R conda_group /home/galaxy/*
-sudo chmod -R g+rwx /home/galaxy/*
+chgrp -R conda_group /home/galaxy/{galaxy,Tools,GenBank,ExtraRef,Log}
+chmod -R g+rwx /home/galaxy/{galaxy,Tools,GenBank,ExtraRef,Log}
 ```
+NOTE: this is a workaround for adding  `conda_group` to /home/galaxy *recursively*, because
+that strategy resulted in permission errors (especially with /home/galaxy/.ssh but also with
+the parent directory).
+
+
+
+
+
+
+
+
+
+
