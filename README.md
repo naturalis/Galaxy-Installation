@@ -67,6 +67,19 @@ sudo chmod -R g+rwx /opt/anaconda3/
 conda config --add channels conda-canary
 conda update -n base conda
 ```
+## manage SSH keys
+(user: **ubuntu**)
+To allow additional adminstrators to log in as ubuntu via SSH, add their public SSH keys to the `authorized_keys` list.
+```
+nano /home/ubuntu/.ssh/authorized_keys
+```
+To allow login as galaxy using the *same* keys, copy the authorized_keys file between the home folders of these accounts.
+```
+sudo cp -r /home/ubuntu/.ssh /home/galaxy/
+sudo chown -R galaxy:galaxy /home/galaxy/.ssh
+```
+A reason why you might want to log in as galaxy (instead of login as ubuntu and change user) is to have galaxy user permissions for winSCP or SSHFS sessions.
+
 ## PostgresQL
 (user: **ubuntu**)
 ```
