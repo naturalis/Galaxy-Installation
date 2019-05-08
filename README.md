@@ -113,13 +113,16 @@ chmod 777 /home/galaxy/galaxy/config
 Adjust the config file (/home/galaxy/galaxy/config/galaxy.yml). Either edit in place or 
 upload a customized `galaxy.yml` file. The config file holds key system information. To 
 name a few, this is where to specify administrators, the location of dataset files, network 
-ports, system email address and Conda configuration settings. Backup the template file before
-messing around:
-
+ports, system email address and Conda configuration settings. The template `galaxy.yml` file
+is called `galaxy.yml.sample`; start working from a copy.
 ```
-cp /home/galaxy/galaxy/config/galaxy.yml /home/galaxy/galaxy/config/galaxy.yml_back
+cp /home/galaxy/galaxy/config/galaxy.yml.sample /home/galaxy/galaxy/config/galaxy.yml
 ```
-
+Edit `galaxy.yml`
+```
+change listening port from `http: 127.0.0.1:8080` to `http: 0.0.0.0:8080`
+Add email adress(es) of admins (**uncomment** admin_users: 'john.doe@natalis.nl')
+```
 
 ## Issue
 Add `conda_group` to *galaxy*  
