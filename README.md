@@ -169,9 +169,16 @@ NOTE: to stop, start or restart **nginx**
 ```
 sudo systemctl stop|start|restart nginx
 ```
-[Start galaxy](#Start-Galaxy)  
-Check if the Galaxy server can be reached from your webbrowser, e.g. `http://###.###.###.###` (use the floating ip of your without *:8080*). 
+[Start Galaxy](#Start-Galaxy)  
+Check if the Galaxy server can be reached from your webbrowser, e.g. `http://###.###.###.###` (this should now work **without** *:8080*).  
 
+
+
+
+
+
+## Install Galaxy tools
+[List]( of available tools.
 
 
 
