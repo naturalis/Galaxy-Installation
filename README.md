@@ -174,7 +174,7 @@ sudo systemctl stop|start|restart nginx
 [Start Galaxy](#Start-Galaxy)  
 Check if the Galaxy server can be reached from your webbrowser, e.g. `http://###.###.###.###` (this should now work **without** *:8080*).  
 
-## Maximum number of open files
+## Open files limits, PAM configuration, reboot
 (user: **ubuntu**)  
 To prevent Galaxy from crashing upon reaching the maximum number of open files, [raise](https://underyx.me/articles/raising-the-maximum-number-of-file-descriptors) the "maximum number of file descriptor" limit.  
 [Stop Galaxy](#Stop-Galaxy)
@@ -189,6 +189,17 @@ Add the following lines:
 root soft nofile 64000
 root hard nofile 64000
 ```
+Add the following line:
+```
+session required pam_limits.so
+```
+to both the `common-session` and `common-session-noninteractive` files:
+```
+sudo nano /etc/pam.d/common-session
+sudo nano /etc/pam.d/common-session-noninteractive
+```
+
+
 
 
 
