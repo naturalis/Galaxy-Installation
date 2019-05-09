@@ -189,19 +189,20 @@ Add the following lines:
 root soft nofile 64000
 root hard nofile 64000
 ```
+```
+sudo nano /etc/pam.d/common-session
+```
 Add the following line:
 ```
 session required pam_limits.so
 ```
-to both the `common-session` and `common-session-noninteractive` files:
 ```
-sudo nano /etc/pam.d/common-session
 sudo nano /etc/pam.d/common-session-noninteractive
 ```
-
-
-
-
+Add the following line:
+```
+session required pam_limits.so
+```
 
 
   
