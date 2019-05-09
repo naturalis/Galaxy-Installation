@@ -178,7 +178,8 @@ Check if the Galaxy server can be reached from your webbrowser, e.g. `http://###
 
 
 ## Install Galaxy tools
-[List]( of available tools.
+[List](https://github.com/naturalis/Galaxy-Installation/blob/master/naturalis_galaxy-tool_list.md) of available tools.  
+Follow the instructions on the respective tool pages.
 
 
 
