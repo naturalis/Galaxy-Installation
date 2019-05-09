@@ -144,7 +144,6 @@ Create folder structure
 mkdir -p /home/galaxy/{Tools,GenBank,ExtraRef,Log}
 ```
 Add `conda_group` to *galaxy*  
-(still user: **galaxy**)
 ```
 chgrp -R conda_group /home/galaxy/{galaxy,Tools,GenBank,ExtraRef,Log}
 chmod -R g+rwx /home/galaxy/{galaxy,Tools,GenBank,ExtraRef,Log}
@@ -198,6 +197,7 @@ root hard nofile 64000
     
       
 ## Install Galaxy tools
+(user: **galaxy**)  
 [List](https://github.com/naturalis/Galaxy-Installation/blob/master/naturalis_galaxy-tool_list.md) of available tools.  
 Follow the instructions on the respective tool pages.
 
