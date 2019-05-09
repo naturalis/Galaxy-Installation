@@ -153,7 +153,7 @@ the parent directory).
 
 ## Install Nginx
 (user: **ubuntu**)  
-[Nginx](http://nginx.org/en/) ("engine x") is an HTTP and reverse proxy server
+[Nginx](http://nginx.org/en/)("engine x") is an HTTP and reverse proxy server
 ```
 sudo apt update
 sudo apt install nginx
@@ -174,9 +174,9 @@ sudo systemctl stop|start|restart nginx
 Check if the Galaxy server can be reached from your webbrowser, e.g. `http://###.###.###.###` (this should now work **without** *:8080*).  
 
 ## Maximum number of open files
+(user: **ubuntu**)
 To prevent Galaxy from crashing upon reaching the maximum number of open files, [raise](https://underyx.me/articles/raising-the-maximum-number-of-file-descriptors) the "maximum number of file descriptor" limit.  
 [Stop Galaxy](#Stop-Galaxy)
-(user: **ubuntu**)
 ```
 sudo nano /etc/security/limits.conf
 ```
