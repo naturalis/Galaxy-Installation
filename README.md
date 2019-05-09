@@ -67,6 +67,9 @@ sudo chmod -R g+rwx /opt/anaconda3/
 conda config --add channels conda-canary
 conda update -n base conda
 ```
+NOTE: conda update (user: ubuntu) resulted in a *PermissionError*. For now I used "sudo su" to perform the latter command,
+but this is clearly undesired.
+
 ## manage SSH keys
 (user: **ubuntu**)  
 To allow additional adminstrators to log in as ubuntu via SSH, add their public SSH keys to the `authorized_keys` list.
