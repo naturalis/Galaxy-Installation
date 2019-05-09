@@ -196,10 +196,16 @@ echo "session required pam_limits.so" >> common-session
 echo "session required pam_limits.so" >> common-session-noninteractive
 exit
 ````
-
+View the existig limits:
+```
+ulimit -n; ulimit -Hn; ulimit -Sn
+```
+```
+sudo reboot
+```
+Check if the limits have been increased (run *ulimit* again).
 
   
-    
       
 ## Install Galaxy tools
 (user: **galaxy**)  
