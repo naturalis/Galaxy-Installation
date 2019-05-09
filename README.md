@@ -203,7 +203,7 @@ ulimit -n; ulimit -Hn; ulimit -Sn
 ```
 sudo reboot
 ```
-Check if the limits have been increased (run *ulimit* again).
+Check if the limits have been increased (run **ulimit** again).
 
   
       
