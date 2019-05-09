@@ -189,7 +189,6 @@ Add the following lines:
 root soft nofile 64000
 root hard nofile 64000
 ```
-```
 Add setting to `common-session \ noninteractive`
 ```
 sudo su
