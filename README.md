@@ -189,6 +189,8 @@ Add the following lines:
 root soft nofile 64000
 root hard nofile 64000
 ```
+NOTE: These settings need to be checked; the default value for  "ulimit -Hn" in Ubuntu 18.04 LTS is 1048576.   
+So we are actually *lowering* the limit (not -n and -Sn; these have a default value of 1024)
 Add setting to `common-session \ noninteractive`
 ```
 sudo su
