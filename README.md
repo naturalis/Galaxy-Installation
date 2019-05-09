@@ -159,9 +159,20 @@ sudo apt install nginx
 sudo ufw allow 'Nginx HTTP'
 sudo ufw status
 ```
-NOTE: There are still some issues regarding the configuration of `nginx.conf`.
-For now the `nginx.conf` file of the current production-server was used, with replacement
-of server_name IP with the floating IP of this instance.
+Replace `/etc/nginx/nginx.conf` with [nginx.conf](https://github.com/naturalis/Galaxy-Installation/blob/master/nginx.conf)  
+Edit `galaxy.yml`:
+```
+sudo nano /home/galaxy/galaxy/config/galaxy.yml
+```
+Change `http: 0.0.0.0:8080` to `socket: 0.0.0.0:8080`  
+Start Nginx
+```
+sudo systemctl start nginx
+```
+Start galaxy
+
+
+NOTE: to stop or restart nginx use
 ```
 sudo systemctl stop nginx
 sudo systemctl start nginx
