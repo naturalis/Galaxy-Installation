@@ -205,7 +205,7 @@ ulimit -n; ulimit -Hn; ulimit -Sn
 ```
 sudo reboot
 ```
-Check if the limits have been increased (run **ulimit** again).
+Start a new SSH session and check if the limits have been increased (run **ulimit** again).
 
   
       
