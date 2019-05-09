@@ -128,11 +128,13 @@ Add email adress(es) of admins (*uncomment* admin_users: 'john.doe@natalis.nl')
 sh /home/galaxy/galaxy/run.sh --daemon
 ```
 Check if the Galaxy server can be reached from your webbrowser, e.g. `http://###.###.###.###:8080` (use the floating ip of your instance followed by *:8080* since `nginx` has not been setup).  
-## Stop Galaxy
+## Stop Galaxy  
+(user: **galaxy**)
 ```
 sh /home/galaxy/galaxy/run.sh --stop-daemon
 ```
 ## Install Galaxy (second part)
+(user: **galaxy**)  
 Create toolmenu file
 ```
 cp /home/galaxy/galaxy/config/tool_conf.xml.sample /home/galaxy/galaxy/config/tool_conf.xml
