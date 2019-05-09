@@ -95,7 +95,7 @@ GRANT ALL PRIVILEGES ON DATABASE galaxydb to galaxy;
 exit
 ```
 
-## Install Galaxy
+## Install Galaxy (first part)
 (user: **galaxy**)    
 Login as user `galaxy` and load the modified path
 ```
@@ -128,10 +128,11 @@ Add email adress(es) of admins (*uncomment* admin_users: 'john.doe@natalis.nl')
 sh /home/galaxy/galaxy/run.sh --daemon
 ```
 Check if the Galaxy server can be reached from your webbrowser, e.g. `http://###.###.###.###:8080` (use the floating ip of your instance followed by *:8080* since `nginx` has not been setup).  
-**Stop Galaxy**
+## Stop Galaxy
 ```
 sh /home/galaxy/galaxy/run.sh --stop-daemon
 ```
+## Install Galaxy (second part)
 Create toolmenu file
 ```
 cp /home/galaxy/galaxy/config/tool_conf.xml.sample /home/galaxy/galaxy/config/tool_conf.xml
@@ -172,11 +173,28 @@ sudo systemctl stop|start|restart nginx
 [Start Galaxy](#Start-Galaxy)  
 Check if the Galaxy server can be reached from your webbrowser, e.g. `http://###.###.###.###` (this should now work **without** *:8080*).  
 
+## Maximum number of open files
+To prevent Galaxy from crashing upon reaching the maximum number of open files, [raise](https://underyx.me/articles/raising-the-maximum-number-of-file-descriptors) the "maximum number of file descriptor" limit.  
+[Stop Galaxy](#Stop-Galaxy)
+(user: **ubuntu**)
+```
+sudo nano /etc/security/limits.conf
+```
+```
+# apply to all users except root = *
+*    soft nofile 64000
+*    hard nofile 64000
+# apply to root user only = root
+root soft nofile 64000
+root hard nofile 64000
+```
 
 
 
 
-
+  
+    
+      
 ## Install Galaxy tools
 [List](https://github.com/naturalis/Galaxy-Installation/blob/master/naturalis_galaxy-tool_list.md) of available tools.  
 Follow the instructions on the respective tool pages.
