@@ -165,14 +165,10 @@ Start Nginx
 ```
 sudo systemctl start nginx
 ```
-[Start galaxy](#Start-Galaxy)
-
-
-NOTE: to stop or restart nginx use
+[Start galaxy](#Start-Galaxy)  
+NOTE: to stop, start or restart **nginx**
 ```
-sudo systemctl stop nginx
-sudo systemctl start nginx
-sudo systemctl restart nginx
+sudo systemctl stop|start|restart nginx
 ```
 
 
