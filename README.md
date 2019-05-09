@@ -165,12 +165,12 @@ Start Nginx
 ```
 sudo systemctl start nginx
 ```
-[Start galaxy](#Start-Galaxy)  
 NOTE: to stop, start or restart **nginx**
 ```
 sudo systemctl stop|start|restart nginx
 ```
-
+[Start galaxy](#Start-Galaxy)  
+Check if the Galaxy server can be reached from your webbrowser, e.g. `http://###.###.###.###` (use the floating ip of your without *:8080*). 
 
 
 
