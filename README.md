@@ -174,17 +174,17 @@ sudo systemctl stop|start|restart nginx
 Check if the Galaxy server can be reached from your webbrowser, e.g. `http://###.###.###.###` (this should now work **without** *:8080*).  
 
 ## Maximum number of open files
-(user: **ubuntu**)
+(user: **ubuntu**)  
 To prevent Galaxy from crashing upon reaching the maximum number of open files, [raise](https://underyx.me/articles/raising-the-maximum-number-of-file-descriptors) the "maximum number of file descriptor" limit.  
 [Stop Galaxy](#Stop-Galaxy)
+Edit the limits config file (`/etc/security/limits.conf`) or 
 ```
 sudo nano /etc/security/limits.conf
 ```
+Add the following lines:
 ```
-# apply to all users except root = *
 *    soft nofile 64000
 *    hard nofile 64000
-# apply to root user only = root
 root soft nofile 64000
 root hard nofile 64000
 ```
