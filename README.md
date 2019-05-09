@@ -160,16 +160,12 @@ sudo ufw allow 'Nginx HTTP'
 sudo ufw status
 ```
 Replace `/etc/nginx/nginx.conf` with [nginx.conf](https://github.com/naturalis/Galaxy-Installation/blob/master/nginx.conf)  
-Edit `galaxy.yml`:
-```
-sudo nano /home/galaxy/galaxy/config/galaxy.yml
-```
-Change `http: 0.0.0.0:8080` to `socket: 0.0.0.0:8080`  
+Change `http: 0.0.0.0:8080` to `socket: 0.0.0.0:8080` in `galaxy.yml`
 Start Nginx
 ```
 sudo systemctl start nginx
 ```
-Start galaxy
+[Start galaxy](Start Galaxy)
 
 
 NOTE: to stop or restart nginx use
