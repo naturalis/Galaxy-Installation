@@ -47,7 +47,7 @@ sudo passwd galaxy
 ```
 **7.** Login as user `galaxy` and change command prompt of login shell (user: **galaxy**)
 ```
-su - galaxy
+su galaxy
 #secret_password
 chsh -s /bin/bash
 exit
