@@ -161,13 +161,13 @@ the parent directory).
 ```
 sudo apt update
 sudo apt install nginx
-sudo ufw allow 'Nginx HTTP'
-sudo ufw status
 ```
 Replace `/etc/nginx/nginx.conf` with [nginx.conf](https://github.com/naturalis/Galaxy-Installation/blob/master/nginx.conf)  
 Change `http: 0.0.0.0:8080` to `socket: 0.0.0.0:8080` in `galaxy.yml`
 Start Nginx
 ```
+sudo ufw allow 'Nginx HTTP'
+sudo ufw status
 sudo systemctl start nginx
 ```
 NOTE: to stop, start or restart **nginx**
