@@ -246,7 +246,7 @@ file_path: /media/GalaxyData/database/files
 </pre>
 
 ## Adjust config files to enable download of larger files (>1 GB) from Galaxy
-A reference for this topic can be found [here](https://docs.galaxyproject.org/en/latest/admin/nginx.html#sending-files-with-nginx)  
+A reference for this [topic](https://docs.galaxyproject.org/en/latest/admin/nginx.html#sending-files-with-nginx)  
 Adjust **nginx.conf**
 ```
 sudo nano /etc/nginx/nginx.conf
