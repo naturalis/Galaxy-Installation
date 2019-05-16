@@ -234,6 +234,11 @@ Modify fstab:
 ```
 sudo nano /etc/fstab
 ```
+
+<pre>
+This        That        And             This
+That        This        And             That    
+</pre>
       
 ## Install Galaxy tools
 (user: **galaxy**)  
