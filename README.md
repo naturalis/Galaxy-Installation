@@ -11,12 +11,12 @@ As of this writing, Ubuntu 18 has Python 3.x installed by default, but [Galaxy](
 ```
 sudo apt-get install python
 ```
-**2.** Create 'galaxy-python' folder
+* Create 'galaxy-python' folder
 ```
 sudo mkdir /home/galaxy-python
 sudo ln -s /usr/bin/python /home/galaxy-python/
 ```
-**3.** Download and install Conda
+* Download and install Conda
 ```
 wget https://repo.anaconda.com/archive/Anaconda3-2018.12-Linux-x86_64.sh
 sudo sh Anaconda3-2018.12-Linux-x86_64.sh
@@ -25,18 +25,18 @@ Use `/opt/anaconda3` for the install location,
 `no` for initialization of Anaconda3 in /home/ubuntu/.bashrc
 and `no` for installation of Microsoft VSCode.  
   
-**4.** Add python and conda to `path` (system wide)
+* Add python and conda to `path` (system wide)
 ```
 sudo su
 (rm /etc/environment; cat | sed 's_PATH="_PATH="/home/galaxy-python:/opt/anaconda3/bin:_g' > /etc/environment) < /etc/environment
 exit
 source /etc/environment
 ```
-**5.** Create `conda_group` (for permissions outside homedir, in particular `/opt`, without sudo)
+* Create `conda_group` (for permissions outside homedir, in particular `/opt`, without sudo)
 ```
 sudo groupadd conda_group
 ```
-**6.** Create **NON-root** user `galaxy`
+* Create **NON-root** user `galaxy`
 ```
 sudo useradd -d /home/galaxy -m galaxy
 ```
@@ -45,7 +45,7 @@ set password and don't publish it on this page..
 sudo passwd galaxy
 #secret_password
 ```
-**7.** Login as user `galaxy` and change command prompt of login shell (user: **galaxy**)
+* Login as user `galaxy` and change command prompt of login shell (user: **galaxy**)
 ```
 su galaxy
 #secret_password
@@ -53,16 +53,16 @@ chsh -s /bin/bash
 exit
 # login again to see if worked
 ```
-**8.** Add `ubuntu` and `galaxy` to `conda_group` (user: **ubuntu**)
+* Add `ubuntu` and `galaxy` to `conda_group` (user: **ubuntu**)
 ```
 for user in ubuntu galaxy; do sudo usermod -a -G conda_group "$user"; done
 ```
-**9.** Add `conda_group` to *conda*
+* Add `conda_group` to *conda*
 ```
 sudo chgrp -R conda_group /opt/anaconda3/
 sudo chmod -R g+rwx /opt/anaconda3/
 ```
-**10.** 'Downngrade' Conda to `canary` as a workaround for this [issue](https://github.com/conda/conda/issues/7267#issuecomment-420571523)
+* 'Downngrade' Conda to `canary` as a workaround for this [issue](https://github.com/conda/conda/issues/7267#issuecomment-420571523)
 ```
 conda config --add channels conda-canary
 conda update -n base conda
