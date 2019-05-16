@@ -252,6 +252,7 @@ Adjust **nginx.conf**
 sudo nano /etc/nginx/nginx.conf
 ```
 Add the following to your Galaxy’s server {} block:
+(under    # proxy all requests not matching other locations to uWSGI)
 ```
         location /_x_accel_redirect/ {
             internal;
@@ -262,11 +263,9 @@ Adjust **galaxy.yml**
 ```
 sudo nano /home/galaxy/galaxy/config/galaxy.yml
 ```
-Add the 
+Uncomment and substitute the `nginx_x_accel_redirect_base` line with: 
 ```
-galaxy:
-    #...
-    nginx_x_accel_redirect_base: '/_x_accel_redirect'
+nginx_x_accel_redirect_base: '/_x_accel_redirect'
 ```
 
 ## Install Galaxy tools
