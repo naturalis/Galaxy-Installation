@@ -231,12 +231,17 @@ LABEL=galaxy_2019       /media/GalaxyData       ext4    defaults        0 0
 </pre>
 <pre>
 sudo mount /media/Galaxy                         # mount the new volume
+lsblk                                            # check that the volume is mounted
+# If running: STOP Galaxy
+reboot                                           # check if the volume mounts at startup
 </pre>
 
 ## Use volume for Galaxy data
+<pre>
 sudo mkdir -p /media/GalaxyData/database/files   # databse/files will be used by Galaxy
 sudo nano /home/galaxy/galaxy/config/galaxy.yml  # edit galaxy.yml, uncomment and adjust dataset storage filepath:
 file_path: /media/GalaxyData/database/files
+</pre>
       
 ## Install Galaxy tools
 (user: **galaxy**)  
