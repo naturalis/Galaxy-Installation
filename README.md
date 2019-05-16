@@ -235,7 +235,7 @@ lsblk                                            # check that the volume is moun
 </pre>
 If running: [Stop Galaxy](#Stop-Galaxy)
 <pre>
-reboot                                           # check if the volume mounts at startup
+sudo reboot                                      # check if the volume mounts at startup
 </pre>
 
 ## Use volume for Galaxy data
