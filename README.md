@@ -211,7 +211,29 @@ sudo reboot
 ```
 Start a new SSH session and check if the limits have been increased (run **ulimit** again).
 
-  
+## Attach storage volume
+In [OpenStack dashboard](https://stack.naturalis.nl/horizon):  
+Create volume (1000 GB; no soure, empty volume)  
+Name = GalaxyData; Description = Galaxy_19.01  
+Edit volume; Manage attachments; add volume to Galaxy instance  
+(user: **ubuntu**)  
+
+Add a *hostname* to
+```
+sudo nano /etc/hosts
+```
+127.0.0.1 galaxy_2019 localhost  
+Check if volume has b (supposedly **sdc**; check volume size):
+```
+lsblk
+sudo mkfs.ext4 -L galaxy_2019 /dev/sdc
+sudo mkdir /media/GalaxyData
+sudo mkdir /media/GalaxyData/database/files
+```
+Modify fstab:
+```
+sudo nano /etc/fstab
+```
       
 ## Install Galaxy tools
 (user: **galaxy**)  
