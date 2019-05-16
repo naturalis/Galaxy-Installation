@@ -252,7 +252,7 @@ Adjust **nginx.conf**
 sudo nano /etc/nginx/nginx.conf
 ```
 Add the following to your Galaxy’s server {} block:  
-(under    # proxy all requests not matching other locations to uWSGI)
+(find    `# proxy all requests not matching other locations to uWSGI`)
 ```
         location /_x_accel_redirect/ {
             internal;
