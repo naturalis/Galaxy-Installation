@@ -217,12 +217,6 @@ Create volume (1000 GB; no soure, empty volume)
 Name = GalaxyData; Description = Galaxy_19.01  
 Edit volume; Manage attachments; add volume to Galaxy instance  
 (user: **ubuntu**)  
-Add a *hostname* to
-```
-sudo nano /etc/hosts
-```
-127.0.0.1 galaxy_2019 localhost  
-
 <pre>
 lsblk                                            # list block devices (check if volume, supposedly sdc, exists; check size)
 sudo mkfs.ext4 -L galaxy_2019 /dev/sdc           # add ext4 file system (this will ERASE existing data if present)
