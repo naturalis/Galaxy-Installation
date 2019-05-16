@@ -7,7 +7,7 @@ These instructions start from the assumption that an instance running Ubuntu (in
 ## Python, Conda, Users and Groups
 As of this writing, Ubuntu 18 has Python 3.x installed by default, but [Galaxy](https://docs.galaxyproject.org/) still requires Python 2.7 for install. Galaxy should be run as user galaxy (not ubuntu). In the instructions below we aim to be explicit about the current user, but in general: unless the install requires `sudo` the user should be `galaxy`.
 
-**1.** Install Python v. 2.7 (user: **ubuntu**)
+* Install Python v. 2.7 (user: **ubuntu**)
 ```
 sudo apt-get install python
 ```
@@ -240,7 +240,7 @@ reboot                                           # check if the volume mounts at
 
 ## Use volume for Galaxy data
 <pre>
-sudo mkdir -p /media/GalaxyData/database/files   # databse/files will be used by Galaxy
+sudo mkdir -p /media/GalaxyData/database/files   # databse/files is a default Galaxy storage location
 sudo nano /home/galaxy/galaxy/config/galaxy.yml  # edit galaxy.yml, uncomment and adjust dataset storage filepath:
 file_path: /media/GalaxyData/database/files
 </pre>
