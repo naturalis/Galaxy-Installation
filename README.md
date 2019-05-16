@@ -232,7 +232,9 @@ LABEL=galaxy_2019       /media/GalaxyData       ext4    defaults        0 0
 <pre>
 sudo mount /media/Galaxy                         # mount the new volume
 lsblk                                            # check that the volume is mounted
-# If running: STOP Galaxy
+</pre>
+If running: [Stop Galaxy](#Stop-Galaxy)
+<pre>
 reboot                                           # check if the volume mounts at startup
 </pre>
 
