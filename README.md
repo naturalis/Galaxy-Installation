@@ -225,9 +225,11 @@ sudo mkdir -p /media/GalaxyData/database/files   # GalaxyData will become the mo
 *Fstab* is a config file that lists all available disks and disk partitions, and indicates how they are to be initialized.
 <pre>
 sudo nano /etc/fstab                              # modify fstab and add the following line:
-
+</pre>
+<pre>
 LABEL=galaxy_2019       /media/GalaxyData       ext4    defaults        0 0
-
+</pre>
+<pre>
 sudo mount /media/Galaxy                          # 
 </pre>
       
