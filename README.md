@@ -214,8 +214,7 @@ Start a new SSH session and check if the limits have been increased (run **ulimi
 ## Attach storage volume
 In [OpenStack dashboard](https://stack.naturalis.nl/horizon):  
 Create volume (1000 GB; no soure, empty volume)  
-Name = GalaxyData; Description = Galaxy_19.01  
-Edit volume; Manage attachments; add volume to Galaxy instance  
+Add volume to Galaxy instance (Edit volume; Manage attachments)
   
 (user: **ubuntu**)  
 <pre>
@@ -223,10 +222,14 @@ lsblk                                            # list block devices (check if 
 sudo mkfs.ext4 -L galaxy_2019 /dev/sdc           # add ext4 file system (this will ERASE existing data if present)
 sudo mkdir -p /media/GalaxyData/database/files   # GalaxyData will become the mountpoint, databse/files will be used by Galaxy
 </pre>
-Modify fstab:
-```
-sudo nano /etc/fstab
-```
+*Fstab* is a config file that lists all available disks and disk partitions, and indicates how they are to be initialized.
+<pre>
+sudo nano /etc/fstab                              # modify fstab and add the following line:
+
+LABEL=galaxy_2019       /media/GalaxyData       ext4    defaults        0 0
+
+sudo mount /media/Galaxy                          # 
+</pre>
       
 ## Install Galaxy tools
 (user: **galaxy**)  
