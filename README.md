@@ -216,6 +216,7 @@ In [OpenStack dashboard](https://stack.naturalis.nl/horizon):
 Create volume (1000 GB; no soure, empty volume)  
 Name = GalaxyData; Description = Galaxy_19.01  
 Edit volume; Manage attachments; add volume to Galaxy instance  
+  
 (user: **ubuntu**)  
 <pre>
 lsblk                                            # list block devices (check if volume, supposedly sdc, exists; check size)
