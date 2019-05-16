@@ -123,7 +123,7 @@ cp /home/galaxy/galaxy/config/galaxy.yml.sample /home/galaxy/galaxy/config/galax
 ```
 Edit **galaxy.yml**:  
 change listening port from `http: 127.0.0.1:8080` to `http: 0.0.0.0:8080`  
-Add email adress(es) of admins (*uncomment* admin_users: 'john.doe@natalis.nl')  
+Add email adress(es) of admin(s) (*uncomment* admin_users: 'john.doe@naturalis.nl')  
   
 ## Start Galaxy
 (user: **galaxy**)  
