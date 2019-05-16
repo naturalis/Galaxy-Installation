@@ -244,7 +244,31 @@ sudo mkdir -p /media/GalaxyData/database/files   # databse/files is a default Ga
 sudo nano /home/galaxy/galaxy/config/galaxy.yml  # edit galaxy.yml, uncomment and adjust dataset storage filepath:
 file_path: /media/GalaxyData/database/files
 </pre>
-      
+
+## Adjust config files to enable download of larger files (>1 GB) from Galaxy
+A reference for this topic can be found [here](https://docs.galaxyproject.org/en/latest/admin/nginx.html#sending-files-with-nginx)  
+Adjust **nginx.conf**
+```
+sudo nano /etc/nginx/nginx.conf
+```
+Add the following to your Galaxy’s server {} block:
+```
+        location /_x_accel_redirect/ {
+            internal;
+            alias /;
+        }
+```
+Adjust **galaxy.yml**
+```
+sudo nano /home/galaxy/galaxy/config/galaxy.yml
+```
+Add the 
+```
+galaxy:
+    #...
+    nginx_x_accel_redirect_base: '/_x_accel_redirect'
+```
+
 ## Install Galaxy tools
 (user: **galaxy**)  
 [List](https://github.com/naturalis/Galaxy-Installation/blob/master/naturalis_galaxy-tool_list.md) of available tools.  
