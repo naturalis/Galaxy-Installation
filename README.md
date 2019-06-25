@@ -144,12 +144,12 @@ cp /home/galaxy/galaxy/config/tool_conf.xml.sample /home/galaxy/galaxy/config/to
 ```
 Create folder structure
 ```
-mkdir -p /home/galaxy/{Tools,GenBank,ExtraRef,Log}
+mkdir -p /home/galaxy/{Tools,Log}
 ```
 Add `conda_group` to *galaxy*  
 ```
-chgrp -R conda_group /home/galaxy/{galaxy,Tools,GenBank,ExtraRef,Log}
-chmod -R g+rwx /home/galaxy/{galaxy,Tools,GenBank,ExtraRef,Log}
+chgrp -R conda_group /home/galaxy/{galaxy,Tools,Log}
+chmod -R g+rwx /home/galaxy/{galaxy,Tools,Log}
 ```
 NOTE: this is a workaround for adding `conda_group` to /home/galaxy *recursively*, because
 that strategy resulted in permission errors (especially with /home/galaxy/.ssh but also with
