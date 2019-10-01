@@ -230,7 +230,7 @@ sudo nano /etc/fstab                             # modify fstab and add the foll
 LABEL=galaxy_2019       /media/GalaxyData       ext4    defaults        0 0
 </pre>
 <pre>
-sudo mount /media/Galaxy                         # mount the new volume
+sudo mount /media/GalaxyData                     # mount the new volume
 lsblk                                            # check that the volume is mounted
 </pre>
 If running: [Stop Galaxy](#Stop-Galaxy)
