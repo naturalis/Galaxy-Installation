@@ -3,7 +3,6 @@
 |              |              |
 |------------- |:-------------|
 |[add blast to otutable](https://github.com/naturalis/galaxy-tool-add-blast-to-otutable) | merge BLAST output with otu tables | 
-|[add blast to otutable](https://github.com/naturalis/galaxy-tool-add-blast-to-otutable) | merge BLAST output with otu tables |
 |[alpha](https://github.com/naturalis/galaxy-tool-alpha) | calculate alpha diversity for an otu table | 
 |[BLAST ](https://github.com/naturalis/galaxy-tool-BLAST)  | wrapper for BLASTn |
 |[BLAST_wrapper](https://github.com/naturalis/galaxy-tool-BLAST_wrapper)  | **superseded ?** |
