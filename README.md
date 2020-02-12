@@ -269,6 +269,18 @@ Uncomment and substitute the `nginx_x_accel_redirect_base` line with:
 nginx_x_accel_redirect_base: '/_x_accel_redirect'
 ```
 
+## Setup HTTPS
+
+We have setup HTTPS with the following moving parts:
+
+- certificates are issued by letsencrypt
+- we let these be fetched automatically by certbot
+- the certbot also injects these into the nginx config files
+- to this end we have followed [this](https://gist.github.com/cecilemuller/a26737699a7e70a7093d4dc115915de8) approach,
+  which means we made the nginx configuration more modular. **Note that the config by Marten no longer fully applies**:
+  we scooped out the parts that are in the `server {}` block, and migrated those to a separate galaxy.conf file. The
+  top-level nginx.conf is now the default version of the installation.
+
 ## Install Galaxy tools
 (user: **galaxy**)  
 [List](https://github.com/naturalis/Galaxy-Installation/blob/master/naturalis_galaxy-tool_list.md) of available tools.  
