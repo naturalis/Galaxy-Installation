@@ -288,12 +288,13 @@ Follow the instructions on the respective tool pages.
 
 ## Migrate to v.19.09
 (user: **galaxy**)
-cd /home/galaxy/galaxy
-git fetch
-git checkout release_19.09
-git pull -ff-only
-sh /home/galaxy/galaxy/manage_db.sh upgrade
-
+```
+cd /home/galaxy/galaxy  
+git fetch  
+git checkout release_19.09  
+git pull --ff-only  
+sh /home/galaxy/galaxy/manage_db.sh upgrade  
+```
 ## Set up Cron
 
 
